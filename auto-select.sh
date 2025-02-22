@@ -21,8 +21,8 @@ while {[gets $env_file line] >= 0} {
 close $env_file
 
 # Clone the repository if it doesn't exist
-if {[file exists "evm-auto-deploy"]} {
-    cd evm-auto-deploy
+if {[file exists "ewm-auto-deploy"]} {
+    cd ewm-auto-deploy
 } else {
     spawn git clone https://github.com/Bimobudimantoro/ewm-auto-deploy.git
     expect {
@@ -30,7 +30,7 @@ if {[file exists "evm-auto-deploy"]} {
             exp_continue
         }
     }
-    cd evm-auto-deploy
+    cd ewm-auto-deploy
 }
 
 # Install dependencies
